@@ -6,8 +6,8 @@ The Bicep file used in this quickstart is from Azure Quickstart Templates
 
 The following Azure resources have been defined in the Bicep file:
 
-Microsoft.Network/virtualNetworks: Create an Azure virtual network.
-Microsoft.Network/virtualNetworks/subnets: Create a subnet.
+1. Microsoft.Network/virtualNetworks: Create an Azure virtual network.
+2. Microsoft.Network/virtualNetworks/subnets: Create a subnet.
 
 # Deploy the Bicep file
 1. Save the Bicep file as main.bicep to your local computer.
