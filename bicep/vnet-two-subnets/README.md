@@ -43,3 +43,16 @@ Get-AzResource -ResourceGroupName exampleRG
 
 1. On the Overview tab, you will see the defined address space of 10.0.0.0/16.
 2. On the Subnets tab, you will see the deployed subnets of Subnet1 and Subnet2 with the appropriate values from the Bicep file.
+
+# Clean up resources
+When you no longer need the resources that you created with the virtual network, use Azure portal, Azure CLI, or Azure PowerShell to delete the resource group. This removes the virtual network and all the related resources.
+
+### Azure CLI:
+```
+az group delete --name exampleRG
+```
+
+### Azure Powershell:
+```
+Remove-AzResourceGroup -Name exampleRG
+```
