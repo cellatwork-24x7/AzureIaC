@@ -1,4 +1,4 @@
-# AzureIaaC : Azure Infrastructure as Code: 
+# AzureIaC : Azure Infrastructure as Code: 
 
 This repository contains a set of Terraform templates for deploying infrastructure on Azure. It covers different scenarios such as deploying a Virtual Network, deploying a Virtual Machine, deploying a Kubernetes cluster, etc. The project uses Azure CLI for authentication and Bicep as well as Terraform for deploying the infrastructure.
 
