@@ -50,4 +50,33 @@
     
 5. Kubernetes command-line tool (kubectl): [Download kubectl](https://kubernetes.io/releases/download/)
 
+# Initialize Terraform
+Run terraform init to initialize the Terraform deployment. This command downloads the Azure modules required to manage your Azure resources.
+```
+terraform init
+```
 
+# Create a Terraform execution plan
+Run terraform plan to create an execution plan.
+```
+terraform plan -out main.tfplan
+```
+
+Key points:
+
+1. The terraform plan command creates an execution plan, but doesn't execute it. Instead, it determines what actions are necessary to create the configuration specified in your configuration files. This pattern allows you to verify whether the execution plan matches your expectations before making any changes to actual resources.
+2. The optional -out parameter allows you to specify an output file for the plan. Using the -out parameter ensures that the plan you reviewed is exactly what is applied.
+
+# Apply a Terraform execution plan
+Run terraform apply to apply the execution plan to your cloud infrastructure.
+```
+terraform apply main.tfplan
+```
+
+Key points:
+
+1. The terraform apply command above assumes you previously ran terraform plan -out main.tfplan.
+2. If you specified a different filename for the -out parameter, use that same filename in the call to terraform apply.
+3. If you didn't use the -out parameter, call terraform apply without any parameters.
+
+### Verify the Results [Reference](https://learn.microsoft.com/en-us/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks#verify-the-results)
